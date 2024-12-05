@@ -1,0 +1,142 @@
+from datetime import datetime
+
+agora = datetime.now()
+hora_formatada = agora.strftime("%H:%M:%S")
+print("Horário formatado:", hora_formatada)
+//
+from datetime import datetime, timedelta
+
+agora = datetime.now()
+data_atual = datetime.now()
+data_mais_5_dias = data_atual + timedelta(days=5)
+print("Data com 5 dias a mais:", data_mais_5_dias.strftime("%d-%m-%y"))
+//
+from datetime import datetime, timedelta
+
+agora = datetime.now()
+data_atual = datetime.now()
+data_mais_5_dias = data_atual + timedelta(days=-10)
+print("Data com 10 dias a menos:", data_mais_5_dias.strftime("%d-%m-%y"))
+//
+from  datetime import datetime, timedelta
+
+hora = datetime.now()
+horasomada = hora + timedelta(hours=3)
+print("Horário somado:", hora)
+//
+from  datetime import datetime, timedelta
+
+hora = datetime.now()
+horasomada = hora + timedelta(minutes=-30)
+print("Horário somado:", hora)
+//
+from datetime import datetime
+
+data = "2024-12-03"
+dataformatada = datetime.strptime(data, "%Y-%m-%d")
+print("Objeto datetime:", data)
+//
+idade = int(input("Qual sua idade"))
+
+if idade>=16:
+    print("Sim você podera votar")
+else:
+    print("Não, você podera votar")
+//
+senha = int(input("Digite a senha: "))
+if senha == 1234:
+    print("ACESSO PERMITIDO")
+else:
+    print("ACESSO NEGADO")
+//
+senha = int(input("Quantas maçãs você deseja?"))
+
+if senha<12:
+    print("O preço é", macas*0.30)
+
+if senha>=12:
+    print("O preço é", macas*0.25)
+//
+n1 = 0
+n2 = 0
+for x in range (5):
+    num = int(input("Qual o numero ?"))
+    if num> 0 :
+        n1 += 1
+    if num<0:
+        n2+=1
+print(f"{n1} numeros são positivos")
+print(f"{n2} são negativos")
+//
+n1 = 0
+
+for n in range(0,501):
+    if n  %2 != 0 and n %3 == 0:
+        n1 += n
+print(n1)
+//
+for n in range(100, 201):
+    if n  %2 != 0:
+        print(n)
+//
+n1 = int(input("Digite um número"))
+
+for n1 in range(n1, n1*11, n1):
+    print(n1)
+//
+senha = 0 
+
+while senha != 123:
+    s1 = int(input("Digite a senha"))
+    if s1 == 123:
+        print("Correto")
+        s1 == 123
+        break
+    if s1 != 123:
+        print("Errado")
+//
+class c1():
+    def __init__(self, modelo,cor, ano):
+        self.modelo = modelo
+        self.cor = cor 
+        self.ano = ano
+        
+        
+    def m_modelo(self):
+        return self.modelo
+    def m_cor(self):
+        return self.cor
+    def m_ano(self):
+        return self.ano
+carro = c1("prisma", "preto", "2013")
+print(carro.m_modelo())
+print(carro.m_cor())
+print(carro.m_ano())
+//
+class livros():
+    def __init__(self, nome, ano, autor):
+        self.nome = nome
+        self.ano = ano 
+        self.autor = autor
+        
+    def mo_autor(self):
+        return self.autor
+        
+    def m_nome(self):
+        return self.nome
+            
+    def ano(self,ano2):
+        print(ano)
+        if ano2 > 2000:
+            return("Este livro é de depois de 2000")
+        else:
+            return("Este livro é de antes de 2000")
+            
+     
+livro = livros("Harry Potter e a Pedra Filosofal", 1997, "J. K. Rowling")
+
+print(livro.m_nome())
+
+print(livro.m_autor())
+
+print(livro.ano(1997))
